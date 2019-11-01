@@ -1,6 +1,6 @@
 {
   "name": "lucid-ts-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lucid KV TypeScript wrapper 🍬 High performance and distributed KV store accessible through an HTTP API.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -23,7 +23,7 @@
   "scripts": {
     "build": "tsc",
     "docs": "rm -rf docs && typedoc --out docs src && touch docs/.nojekyll",
-    "docs-publish": "gh-pages -d docs && rm -rf docs",
+    "docs-publish": "yarn docs && gh-pages -d docs -t && rm -rf docs",
     "test": "echo No tests available yet",
     "prepublishOnly": "yarn test && yarn build"
   },
@@ -35,7 +35,7 @@
     "type": "git",
     "url": "https://github.com/lucid-kv/ts-sdk.git"
   },
-  "author": "rigwild <contact@asauvage.fr>",
+  "author": "rigwild <me@rigwild.dev> (https://rigwild.dev/)",
   "license": "MIT",
   "dependencies": {
     "es6-promise": "^4.2.8",
