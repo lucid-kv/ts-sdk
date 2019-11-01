@@ -61,7 +61,7 @@ export class LucidAPI {
       const res2 = await fetch(`${this._LUCID_KV_ENDPOINT}/check-token`, {
         headers: { Authorization: `Bearer ${this._LUCID_JWT}` }
       })
-      if (!res2.ok) throw new Error(`Error ${res.status} - ${(await res.json()).message}`)
+      if (!res2.ok) throw new Error(`Error ${res2.status} - ${(await res2.json()).message}`)
     }
 
     // Set the instance as initialized
