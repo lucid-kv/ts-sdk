@@ -8,8 +8,6 @@ export class LucidAPI {
   /** Was the LucidAPI object initialized */
   protected isInstanceInitialized: boolean = false
 
-  /** Lucid API endpoint */
-  protected _LUCID_API_ENDPOINT: string
   /** Lucid KV endpoint */
   protected _LUCID_KV_ENDPOINT: string
   /** Lucid UI endpoint */
@@ -17,8 +15,6 @@ export class LucidAPI {
   /** Lucid endpoint version */
   protected _LUCID_ENDPOINT_VERSION: string
 
-  /** Lucid endpoint */
-  public get LUCID_ENDPOINT() { return this._LUCID_ENDPOINT }
   /** Lucid API endpoint */
   public get LUCID_API_ENDPOINT() { return this._LUCID_API_ENDPOINT }
   /** Lucid KV endpoint */
@@ -29,13 +25,12 @@ export class LucidAPI {
   public get LUCID_ENDPOINT_VERSION() { return this._LUCID_ENDPOINT_VERSION }
 
   /**
-   * @param LUCID_ENDPOINT Lucid endpoint
+   * @param _LUCID_API_ENDPOINT Lucid API endpoint
    * @param LUCID_JWT Lucid endpoint authentification JSON Web Token
    */
-  constructor(protected _LUCID_ENDPOINT: string = 'http://localhost:7090', protected _LUCID_JWT?: string) {
-    this._LUCID_API_ENDPOINT = `${_LUCID_ENDPOINT}/api`
-    this._LUCID_KV_ENDPOINT = `${_LUCID_ENDPOINT}/api/kv`
-    this._LUCID_UI_ENDPOINT = `${_LUCID_ENDPOINT}/api/ui`
+  constructor(protected _LUCID_API_ENDPOINT: string = 'http://localhost:7090', protected _LUCID_JWT?: string) {
+    this._LUCID_KV_ENDPOINT = `${_LUCID_API_ENDPOINT}/kv`
+    this._LUCID_UI_ENDPOINT = `${_LUCID_API_ENDPOINT}/ui`
     this._LUCID_ENDPOINT_VERSION = ''
   }
 

@@ -17,7 +17,7 @@ import { LucidAPI } from 'lucid-ts-sdk'
 
 const setup = async () => {
   // Create a Lucid API wrapper instance
-  const Lucid = new LucidAPI('http://127.0.0.1:7020', 'your-Lucid-authentication-JSON-Web-Token')
+  const Lucid = new LucidAPI('http://127.0.0.1:7020/api', 'your-Lucid-authentication-JSON-Web-Token')
 
   // Initialize the wrapper instance (validate endpoint and JWT)
   const version = await Lucid.init()
@@ -31,7 +31,7 @@ setup()
 ```
 
 ## SDK API documentation
-https://lucid-kv.github.io/ts-sdk/index.html
+[Lucid TypeScript SDK documentation](https://lucid-kv.github.io/ts-sdk/classes/_index_.lucidapi.html)
 
 ## License
 [The MIT License](./LICENSE)
