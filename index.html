@@ -82,7 +82,7 @@
 
 <span class="hljs-keyword">const</span> setup = <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-comment">// Create a Lucid API wrapper instance</span>
-  <span class="hljs-keyword">const</span> Lucid = <span class="hljs-keyword">new</span> LucidAPI(<span class="hljs-string">'http://127.0.0.1:7020'</span>, <span class="hljs-string">'your-Lucid-authentication-JSON-Web-Token'</span>)
+  <span class="hljs-keyword">const</span> Lucid = <span class="hljs-keyword">new</span> LucidAPI(<span class="hljs-string">'http://127.0.0.1:7020/api'</span>, <span class="hljs-string">'your-Lucid-authentication-JSON-Web-Token'</span>)
 
   <span class="hljs-comment">// Initialize the wrapper instance (validate endpoint and JWT)</span>
   <span class="hljs-keyword">const</span> version = <span class="hljs-keyword">await</span> Lucid.init()
@@ -96,7 +96,7 @@ setup()</code></pre>
 				<a href="#sdk-api-documentation" id="sdk-api-documentation" style="color: inherit; text-decoration: none;">
 					<h2>SDK API documentation</h2>
 				</a>
-				<p><a href="https://lucid-kv.github.io/ts-sdk/">https://lucid-kv.github.io/ts-sdk/</a></p>
+				<p><a href="https://lucid-kv.github.io/ts-sdk/classes/_index_.lucidapi.html">Lucid TypeScript SDK documentation</a></p>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>
