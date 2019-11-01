@@ -1,6 +1,6 @@
 {
   "name": "lucid-ts-sdk",
-  "version": "0.1.2",
+  "version": "0.1.3-0",
   "description": "Lucid KV TypeScript wrapper 🍬 High performance and distributed KV store accessible through an HTTP API.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
