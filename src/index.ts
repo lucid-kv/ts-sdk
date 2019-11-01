@@ -1,3 +1,8 @@
+// Make fetch work with node and browser
+import * as e6p from 'es6-promise'
+(e6p as any).polyfill()
+import 'isomorphic-fetch'
+
 /** Lucid API wrapper */
 export class LucidAPI {
   /** Was the LucidAPI object initialized */
@@ -37,11 +42,13 @@ export class LucidAPI {
 
   /**
    * Initialize the Lucid API wrapper instance.
+   * 
    * Checks the Lucid API endpoint is valid and get its version.
+   * 
    * Checks the Lucid API endpoint authentification JSON Web Token if it was provided.
    *
    * @returns Lucid API endpoint version
-   * @throws {Error} Instance already initialized - Invalid endpoint
+   * @throws {Error} Instance already initialized - Invalid endpoint - Invalid JWT
    */
   public async init(): Promise<string> {
     if (this.isInstanceInitialized) throw new Error('The Lucid API wrapper instance is already initialized.')
