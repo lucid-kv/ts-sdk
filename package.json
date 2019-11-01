@@ -22,6 +22,8 @@
   },
   "scripts": {
     "build": "tsc",
+    "docs": "rm -rf docs && typedoc --out docs src && touch docs/.nojekyll",
+    "docs-publish": "gh-pages -d docs && rm -rf docs",
     "test": "echo No tests available yet",
     "prepublishOnly": "yarn test && yarn build"
   },
@@ -41,6 +43,8 @@
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "^0.0.35",
+    "gh-pages": "^2.1.1",
+    "typedoc": "^0.15.0",
     "typescript": "^3.6.4"
   }
 }
