@@ -1,7 +1,6 @@
 {
-  "name": "@lucid-kv/ts-sdk",
+  "name": "lucid-ts-sdk",
   "version": "0.1.0",
-  "private": false,
   "description": "Lucid KV TypeScript wrapper 🍬 High performance and distributed KV store accessible through an HTTP API.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -24,7 +23,7 @@
   "scripts": {
     "build": "tsc",
     "test": "echo No tests available yet",
-    "prepublish": "yarn test && yarn build"
+    "prepare": "yarn test && yarn build"
   },
   "homepage": "https://github.com/lucid-kv/ts-sdk#readme",
   "bugs": {
