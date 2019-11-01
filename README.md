@@ -31,7 +31,7 @@ setup()
 ```
 
 ## SDK API documentation
-https://lucid-kv.github.io/ts-sdk/
+https://lucid-kv.github.io/ts-sdk/index.html
 
 ## License
 [The MIT License](./LICENSE)
